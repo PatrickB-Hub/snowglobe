@@ -1,0 +1,25 @@
+{
+  "name": "schneekugel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "node --test \"src/**/*.test.ts\"",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "lil-gui": "^0.20.0",
+    "three": "^0.175.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/three": "^0.175.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.86.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.5"
+  }
+}
