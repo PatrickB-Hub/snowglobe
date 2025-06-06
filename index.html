@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#eeedf3" />
+    <meta
+      name="description"
+      content="A small study in motion. Shake a miniature world and explore inertia, currents and settling. Experiment 03 in the Physics Playground series."
+    />
+    <title>A Little Wonder — Physics Playground</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <a class="wordmark" href="./"
+          ><span class="mark" aria-hidden="true">⊶</span> FIELD NOTES <span class="divider">/</span> PHYSICS
+          PLAYGROUND</a
+        ><span class="edition">EXPERIMENT <b>03</b></span>
+      </header>
+      <section class="introduction" aria-labelledby="title">
+        <div>
+          <h1 id="title">Study in <em>Motion</em></h1>
+          <p class="subtitle">A world within a world.<br />Give it a shake. Let a little magic settle.</p>
+        </div>
+        <div class="intro-side">
+          <span class="live-dot"></span> REAL-TIME PHYSICS<span class="intro-note"
+            >by <a href="https://patrickbecker.work" target="_blank" rel="noopener">Patrick Becker</a></span
+          >
+        </div>
+      </section>
+      <section class="stage" aria-label="Interactive snow globe">
+        <div
+          id="scene"
+          role="img"
+          aria-label="A glass globe containing a miniature world. Drag the globe to shake it, or use the Shake button below."
+        ></div>
+        <p id="loading" role="status">A little world is taking shape…</p>
+        <span class="stage-caption"><i></i> A MOMENT, SUSPENDED</span>
+        <div class="readout">
+          <div><span>PARTICLES</span><strong id="particle-count">—</strong></div>
+          <div><span>IN MOTION</span><strong id="moving-count">—</strong></div>
+          <div>
+            <span id="motion-state">SETTLING</span>
+            <div class="energy-track"><i id="energy"></i></div>
+            <small>current energy</small>
+          </div>
+        </div>
+        <p class="interaction-hint">Drag the globe to shake <span>·</span> Drag outside to orbit</p>
+        <div class="scene-tools">
+          <button id="pause" class="text-button" aria-pressed="false">Ⅱ Pause</button
+          ><button id="reset" class="text-button">↺ Reset</button
+          ><button id="camera-reset" class="icon-button" aria-label="Reset camera view" title="Reset camera view">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.1"
+              aria-hidden="true"
+            >
+              <circle cx="9" cy="9" r="5" />
+              <path d="M9 1v16M1 9h16" />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="workbench" aria-label="Experiment controls">
+        <div class="worlds">
+          <div class="collection-title">
+            <h2>A world of your own</h2>
+            <span>CHOOSE YOUR MOMENT</span>
+          </div>
+          <div class="world-buttons">
+            <button data-world="hochzeit" aria-pressed="true">
+              <span class="world-icon" aria-hidden="true">♡</span
+              ><span>Just married<small>Petals & promises</small></span
+              ><span class="choice-dot"></span></button
+            ><button data-world="festival" aria-pressed="false">
+              <span class="world-icon" aria-hidden="true">✳</span
+              ><span>Good vibes<small>A little celebration</small></span
+              ><span class="choice-dot"></span>
+            </button>
+          </div>
+        </div>
+        <div class="motion-control">
+          <div class="collection-title">
+            <h2>Make a little stir</h2>
+            <output id="settling-label" for="settling">DREAMY</output>
+          </div>
+          <label for="settling">How quickly should the moment settle?</label
+          ><input id="settling" type="range" min="0.02" max="0.2" step="0.01" value="0.08" />
+          <div class="range-labels"><span>Slow & floaty</span><span>Down to earth</span></div>
+        </div>
+        <div class="experiment-row">
+          <p id="experiment-note" role="status">A gentle nudge is all it takes. See where the currents go.</p>
+          <button id="shake" class="primary-button" disabled><span aria-hidden="true">↔</span> Shake things up</button>
+        </div>
+      </section>
+      <div class="bottom-bar">
+        <p>INERTIA <span>·</span> CURRENTS <span>·</span> A LITTLE CURIOSITY</p>
+        <span class="series-note">An ordinary object. An extraordinary little world.</span>
+      </div>
+      <details class="about">
+        <summary>What makes it move? <span aria-hidden="true">+</span></summary>
+        <div class="about-grid">
+          <div>
+            <span class="eyebrow">01 / THE LITTLE PUSH</span>
+            <h2>Motion leaves a trace.</h2>
+            <p>
+              The globe follows your hand on a damped spring. As it accelerates, the particles lag behind and the
+              water-like current begins to swirl. Use the shake button for the same experiment with a keyboard or a tap.
+            </p>
+          </div>
+          <div>
+            <span class="eyebrow">02 / THE IN-BETWEEN</span>
+            <h2>A beautifully slow fall.</h2>
+            <p>
+              Particles follow a swirling flow, lose energy and gradually settle under gravity. Change the settling
+              speed to linger a little longer, or let the moment come to rest.
+            </p>
+          </div>
+          <div>
+            <span class="eyebrow">03 / BEHIND THE GLASS</span>
+            <h2>Small world. Simple rules.</h2>
+            <p>
+              Thousands of particles share a simplified current field, bounded by the globe. This is a playful particle
+              simulation, not a full fluid solver. The miniature worlds are crafted in Blender and rendered with
+              Three.js.
+            </p>
+          </div>
+        </div>
+      </details>
+      <footer class="colophon"><span>FIELD NOTES / PHYSICS PLAYGROUND</span><span>03 — A LITTLE WONDER</span></footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
