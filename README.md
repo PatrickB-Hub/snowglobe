@@ -1,4 +1,4 @@
-# A Little Wonder
+# Snowglobe
 
 An interactive snow globe built with Three.js. Drag the globe to shake it, and petals or confetti swirl in a
 simplified water current, then settle again.
